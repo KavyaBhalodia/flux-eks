@@ -1,21 +1,58 @@
----
-apiVersion: helm.toolkit.fluxcd.io/v2
+# ---
+# apiVersion: helm.toolkit.fluxcd.io/v2
+# kind: HelmRelease
+# metadata:
+#   name: velero
+#   namespace: velero
+# spec:
+#   chart:
+#     spec:
+#       chart: velero
+#       reconcileStrategy: ChartVersion
+#       sourceRef:
+#         kind: HelmRepository
+#         name: vmware-tanzu
+#   interval: 1m0s
+#   releaseName: velero
+#   targetNamespace: velero
+#   valuesFrom:
+#   - configMapKeyRef:
+#       name: velero-configmap
+#       key: velero_values.yaml
+
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: velero
-  namespace: velero
+  namespace: flux-system
 spec:
+  interval: 5m
   chart:
     spec:
       chart: velero
-      reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
-        name: vmware-tanzu
-  interval: 1m0s
-  releaseName: velero
-  targetNamespace: velero
-  valuesFrom:
-  - configMapKeyRef:
-      name: velero-configmap
-      key: velero_values.yaml
+        name: velero
+      version: 2.32.1
+  values:
+    configuration:
+      provider: aws
+      backupStorageLocation:
+        bucket: kavya-backup
+        config:
+          region: ap-south-1
+      volumeSnapshotLocation:
+        config:
+          region: ap-south-1
+    credentials:
+      useSecret: true
+    initContainers:
+      - name: plugin-for-aws
+        image: velero/velero-plugin-for-aws:v1.2.0
+        volumeMounts:
+          - mountPath: /target
+            name: plugins
+    serviceAccount:
+      server:
+        create: true
+    deployRestic: true
