@@ -7,7 +7,6 @@ spec:
   chart:
     spec:
       chart: velero
-      version: 5.1.x # auto-update to semver bugfixes only 
       sourceRef:
         kind: HelmRepository
         name: vmware-tanzu
@@ -15,7 +14,7 @@ spec:
   interval: 15m
   timeout: 5m
   releaseName: velero
-  #  valuesFrom:
-  #   - configMapKeyRef:
-  #       name: velero-configmap
-  #       key: velero_values.yaml
+  valuesFrom:
+    - configMapKeyRef:
+        name: velero-configmap
+        key: velero_values.yaml
