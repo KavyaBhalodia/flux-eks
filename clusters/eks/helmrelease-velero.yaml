@@ -15,7 +15,7 @@ spec:
   interval: 15m
   timeout: 5m
   releaseName: velero
-   valuesFrom:
-    - configMapKeyRef:
-        name: velero-configmap
-        key: velero_values.yaml
+  #  valuesFrom:
+  #   - configMapKeyRef:
+  #       name: velero-configmap
+  #       key: velero_values.yaml
