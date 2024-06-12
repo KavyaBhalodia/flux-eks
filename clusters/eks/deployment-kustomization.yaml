@@ -9,5 +9,5 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: cluster/eks
-    namespace: cluster/eks
+    name: flux-eks/clusters/eks
+    namespace: flux-eks/clusters/eks
