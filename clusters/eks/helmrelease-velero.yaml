@@ -14,7 +14,24 @@ spec:
   interval: 15m
   timeout: 5m
   releaseName: velero
-  valuesFrom:
-    - configMapKeyRef:
-        name: velero-configmap
-        key: velero_values.yaml
+  values:
+    configuration:
+      backupStorageLocation:
+      - bucket: kavya-backup
+        provider: aws
+      volumeSnapshotLocation:
+      - config:
+          region: ap-south-1
+        provider: aws
+    initContainers:
+    - name: velero-plugin-for-aws
+      image: velero/velero-plugin-for-aws:v1.7.1
+      volumeMounts:
+      - mountPath: /target
+        name: plugins
+    credentials:
+      useSecret: false
+    serviceAccount:
+      server:
+        annotations:
+          eks.amazonaws.com/role-arn: "arn:aws:iam::975050086565:role/eks-velero-backup"
