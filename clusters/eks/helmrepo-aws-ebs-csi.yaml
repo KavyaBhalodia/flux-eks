@@ -1,9 +1,11 @@
 ---
-apiVersion: source.toolkit.fluxcd.io/v1
+apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
   name: aws-ebs-csi-driver
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 1m
   url: https://kubernetes-sigs.github.io/aws-ebs-csi-driver
+  ref:
+    branch: main
