@@ -20,7 +20,5 @@ serviceAccount:
     annotations:
       eks.amazonaws.com/role-arn: "arn:aws:iam::975050086565:role/eks-velero-backup"
 apiVersion: velero.io/v1
-kind: Backup
-  includedNamespaces:
-  - '*'
+
 
