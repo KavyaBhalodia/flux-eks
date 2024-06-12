@@ -15,3 +15,7 @@ spec:
   interval: 1m0s
   releaseName: velero
   targetNamespace: velero
+  valuesFrom:
+  - configMapKeyRef:
+      name: velero-configmap
+      key: velero_values.yaml
