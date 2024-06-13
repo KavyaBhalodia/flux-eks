@@ -9,5 +9,5 @@ spec:
   prune: true
   timeout: 10m 
   sourceRef:
-    kind: Helmrelease
+    kind: HelmRelease
     name: flux-system
