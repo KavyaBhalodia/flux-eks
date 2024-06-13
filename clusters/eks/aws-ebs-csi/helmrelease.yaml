@@ -11,4 +11,4 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: aws-ebs-csi-driver
-        namespace: flux-system
+        namespace: kube-system
