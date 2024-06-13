@@ -1,13 +1,13 @@
-# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-# kind: Kustomization
-# metadata:
-#   name: aws-ebs-csi-driver
-#   namespace: flux-system
-# spec:
-#   interval: 30m
-#   path: ./aws-ebs-csi
-#   prune: true
-#   timeout: 10m 
-#   sourceRef:
-#     kind: GitRepository
-#     name: flux-system
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: aws-ebs-csi-driver
+  namespace: flux-system
+spec:
+  interval: 30m
+  path: cluster/eks/aws-ebs-csi
+  prune: true
+  timeout: 10m 
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
