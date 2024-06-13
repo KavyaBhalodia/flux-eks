@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 30m
-  path: cluster/eks/aws-ebs-csi
+  path: clusters/eks/aws-ebs-csi
   prune: true
   timeout: 10m 
   sourceRef:
