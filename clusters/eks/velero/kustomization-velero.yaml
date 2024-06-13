@@ -9,5 +9,5 @@ spec:
   prune: true
   timeout: 10m 
   sourceRef:
-    kind: HelmRelease
+    kind: GitRepository
     name: flux-system
