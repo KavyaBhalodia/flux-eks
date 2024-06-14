@@ -36,3 +36,15 @@ spec:
       server:
         annotations:
           eks.amazonaws.com/role-arn: "arn:aws:iam::975050086565:role/eks-velero-recovery"
+    schedules:
+      hourly-backup:
+        disabled: false
+        schedule: "0 * * * *"
+        paused: false
+        template:
+          ttl: "24h"
+          storageLocation: kavya-backup
+          labelSelector:
+            matchLabels:
+              statefulset.kubernetes.io/pod-name: mongodb-1
+          
