@@ -16,6 +16,6 @@ spec:
   values:
     image: 
       tag: 8.0.35
-    primary:
-      nodeSelector:
-        karpenter.sh/nodepool: db
+    # primary:
+    #   nodeSelector:
+    #     karpenter.sh/nodepool: db
