@@ -35,4 +35,4 @@ spec:
     serviceAccount:
       server:
         annotations:
-          eks.amazonaws.com/role-arn: "arn:aws:iam::975050086565:role/eks-velero-backup"
+          eks.amazonaws.com/role-arn: "arn:aws:iam::975050086565:role/eks-velero-recovery"
