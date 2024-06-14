@@ -8,7 +8,6 @@ spec:
   chart:
     spec:
       chart: mongodb
-      
       sourceRef:
         kind: HelmRepository
         name: bitnami
@@ -33,6 +32,6 @@ spec:
         - name: MONGODB_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: mymongodb
+              name: mongodb
               key: mongodb-root-password
               
