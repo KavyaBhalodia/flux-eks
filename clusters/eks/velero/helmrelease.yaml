@@ -47,4 +47,14 @@ spec:
           labelSelector:
             matchLabels:
               statefulset.kubernetes.io/pod-name: mongodb-1
+      daily-backup:
+        disabled: false
+        schedule: "* * * * *"
+        paused: false
+        template:
+          ttl: "504h"
+          storageLocation: kavya-backup
+          labelSelector:
+            matchLabels:
+              statefulset.kubernetes.io/pod-name: mongodb-1
           
