@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: datadir-mymongodb-0
+  namespace: default
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: gp2
+  resources:
+    requests:
+      storage: 8Gi
+  volumeName: pvc-30c071f3-2577-4538-bfaa-0196dae960dc
