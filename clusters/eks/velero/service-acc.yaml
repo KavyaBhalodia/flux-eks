@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: velero
+  namespace: velero
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::975050086565:role/eks-velero-recovery

@@ -1,48 +1,48 @@
 
-########################## aws-ebs-csi-driver #######################
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: aws-ebs-csi-driver
-  namespace: flux-system
-spec:
-  interval: 30m
-  path: ./clusters/eks/aws-ebs-csi
-  prune: true
-  timeout: 10m 
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
+# ########################## aws-ebs-csi-driver #######################
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1
+# kind: Kustomization
+# metadata:
+#   name: aws-ebs-csi-driver
+#   namespace: flux-system
+# spec:
+#   interval: 30m
+#   path: ./clusters/eks/aws-ebs-csi
+#   prune: true
+#   timeout: 10m 
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
 
-################################# mongodb ###############################
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: mongodb
-  namespace: flux-system
-spec:
-  interval: 30m
-  path: ./clusters/eks/mongodb
-  prune: true
-  timeout: 10m 
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
+# ################################# mongodb ###############################
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1
+# kind: Kustomization
+# metadata:
+#   name: mongodb
+#   namespace: flux-system
+# spec:
+#   interval: 30m
+#   path: ./clusters/eks/mongodb
+#   prune: true
+#   timeout: 10m 
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
 
-################################# velero ##################################
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: velero
-  namespace: flux-system
-spec:
-  interval: 30m
-  path: ./clusters/eks/velero
-  prune: true
-  timeout: 10m 
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
+# ################################# velero ##################################
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1
+# kind: Kustomization
+# metadata:
+#   name: velero
+#   namespace: flux-system
+# spec:
+#   interval: 30m
+#   path: ./clusters/eks/velero
+#   prune: true
+#   timeout: 10m 
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system

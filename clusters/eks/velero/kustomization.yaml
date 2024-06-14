@@ -4,6 +4,6 @@ resources:
 - helmrepo.yaml
 - helmrelease.yaml
 - velero-namespace.yaml
-
+- service-acc.yaml
 
 
