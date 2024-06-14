@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - helm-repo.yaml
   - helmrelease-dev.yaml
-  - helmrelease-staging.yaml
+
