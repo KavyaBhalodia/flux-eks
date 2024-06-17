@@ -39,7 +39,7 @@ spec:
         schedules:
           hourly-backup:
             disabled: false
-            schedule: "0 * * * *"
+            schedule: "* * * * *"
             paused: false
             template:
               ttl: "24h"
