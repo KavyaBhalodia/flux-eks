@@ -12,7 +12,7 @@ spec:
         kind: HelmRepository
         name: bitnami
   interval: 1m0s
-  releaseName: mongodb
+  releaseName: mymongodb
   targetNamespace: dev
   values:
     architecture: replicaset
