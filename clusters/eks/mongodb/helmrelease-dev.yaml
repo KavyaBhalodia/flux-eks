@@ -13,7 +13,6 @@ spec:
         name: bitnami
   interval: 1m0s
   releaseName: mongodb
-  targetNamespace: dev
   values:
     architecture: replicaset
     arbiter:
