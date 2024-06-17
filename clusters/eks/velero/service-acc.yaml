@@ -4,4 +4,4 @@ metadata:
   name: velero
   namespace: velero
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::975050086565:role/eks-velero-recovery
+    eks.amazonaws.com/role-arn: arn:aws:iam::975050086565:role/velero-backup
