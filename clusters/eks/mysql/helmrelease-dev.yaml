@@ -23,9 +23,9 @@ spec:
     architecture: replication
     secondary: 
       replicaCount: 2
-    #   podAnnotations:
-    #   pre.hook.backup.velero.io/container: mysql
-    #   pre.hook.backup.velero.io/command: '["/bin/bash", "-c", ""]'
+      podAnnotations:
+      pre.hook.backup.velero.io/container: mysql
+      pre.hook.backup.velero.io/command: '["/bin/bash", "-c", "mysql -u root -pCbQb6RDDw7"]'
     #   post.hook.backup.velero.io/container: mongodb
     #   post.hook.backup.velero.io/command: '["/bin/bash", "-c", "mongosh --eval \"db.fsyncUnlock()\" -u root -p $MONGODB_ROOT_PASSWORD"]'
     # spec:
