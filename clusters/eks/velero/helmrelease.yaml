@@ -42,7 +42,7 @@ spec:
         paused: false
         template:
           ttl: "24h"
-          storageLocation: kavya-backup
+          storageLocation: default
           labelSelector:
             matchLabels:
               statefulset.kubernetes.io/pod-name: mongodb-1
