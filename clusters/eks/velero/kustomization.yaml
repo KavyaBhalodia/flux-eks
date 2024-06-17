@@ -2,8 +2,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - helmrepo.yaml
-# - helmrelease.yaml
-# - velero-namespace.yaml
-# - service-acc.yaml
+- helmrelease.yaml
+- velero-namespace.yaml
+- service-acc.yaml
 
 
