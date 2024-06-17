@@ -4,6 +4,6 @@ namespace: flux-system
 resources:
 - helmrelease.yaml
 - helmrepo.yaml
-- helmrelease-dev.yaml
+# - helmrelease-dev.yaml
 - namespace.yaml
 
