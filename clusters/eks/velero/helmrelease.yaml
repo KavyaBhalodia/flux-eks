@@ -47,7 +47,7 @@ spec:
             matchLabels:
               statefulset.kubernetes.io/pod-name: mongodb-1
                   # apps.kubernetes.io/pod-index: 2
-              statefulset.kubernetes.io/pod-name: mongodb-2
+              # statefulset.kubernetes.io/pod-name: mongodb-2
                   # statefulset.kubernetes.io/pod-name=default-mysql-dev-secondary-0
           # daily-backup:
           #   disabled: false
