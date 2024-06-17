@@ -19,6 +19,6 @@ spec:
     # primary:
     #   nodeSelector:
     #     karpenter.sh/nodepool: db
-    architecture: replicaset
+    architecture: replication
     secondary: 
       replicaCount: 2
