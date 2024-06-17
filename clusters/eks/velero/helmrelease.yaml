@@ -11,7 +11,6 @@ spec:
         kind: HelmRepository
         name: vmware-tanzu
         namespace: flux-system
-        
   interval: 15m
   timeout: 5m
   releaseName: velero
@@ -36,17 +35,17 @@ spec:
       server:
         annotations:
           eks.amazonaws.com/role-arn: arn:aws:iam::975050086565:role/velero-backup
-        schedules:
-          hourly-backup:
-            disabled: false
-            schedule: "* * * * *"
-            paused: false
-            template:
-              ttl: "24h"
-              storageLocation: kavya-backup
-              labelSelector:
-                matchLabels:
-                  statefulset.kubernetes.io/pod-name: mongodb-1
+    schedules:
+      hourly-backup:
+        disabled: false
+        schedule: "* * * * *"
+        paused: false
+        template:
+          ttl: "24h"
+          storageLocation: kavya-backup
+          labelSelector:
+            matchLabels:
+              statefulset.kubernetes.io/pod-name: mongodb-1
                   # apps.kubernetes.io/pod-index: 2
                   # statefulset.kubernetes.io/pod-name: mongodb-2
                   # statefulset.kubernetes.io/pod-name=default-mysql-dev-secondary-0
