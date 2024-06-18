@@ -15,7 +15,7 @@ spec:
         kind: HelmRepository
         name: mongodb
         namespace: flux-system
-  targetNamespace: mongodb
+  targetNamespace: dev
   values:
     architecture: replicaset
     replicaCount: 2
