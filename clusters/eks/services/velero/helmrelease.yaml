@@ -46,7 +46,7 @@ spec:
           labelSelector:
             matchLabels:
               apps.kubernetes.io/pod-index: 1
-              apps.kubernetes.io/pod-index: 0
+              
              
 
 
