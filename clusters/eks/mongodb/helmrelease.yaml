@@ -24,14 +24,14 @@ spec:
       pre.hook.backup.velero.io/command: '["/bin/bash", "-c", "mongosh --eval \"db.fsyncLock()\" -u root -p $MONGODB_ROOT_PASSWORD"]'
       post.hook.backup.velero.io/container: mongodb
       post.hook.backup.velero.io/command: '["/bin/bash", "-c", "mongosh --eval \"db.fsyncUnlock()\" -u root -p $MONGODB_ROOT_PASSWORD"]'
-    spec:
-      containers:
-      - name: mongodb
-        image: mongo:4.4
-        env:
-        - name: MONGODB_ROOT_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: mongodb
-              key: mongodb-root-password
+    # spec:
+    #   containers:
+    #   - name: mongodb
+    #     image: mongo:4.4
+    #     env:
+    #     - name: MONGODB_ROOT_PASSWORD
+    #       valueFrom:
+    #         secretKeyRef:
+    #           name: mongodb
+    #           key: mongodb-root-password
               
