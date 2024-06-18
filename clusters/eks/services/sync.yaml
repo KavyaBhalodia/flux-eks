@@ -33,19 +33,19 @@ spec:
 
 ################################# velero ##################################
 ---
-# apiVersion: kustomize.toolkit.fluxcd.io/v1
-# kind: Kustomization
-# metadata:
-#   name: velero
-#   namespace: flux-system
-# spec:
-#   interval: 30m
-#   path: ./clusters/eks/services/velero
-#   prune: true
-#   timeout: 10m 
-#   sourceRef:
-#     kind: GitRepository
-#     name: flux-system
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: velero
+  namespace: flux-system
+spec:
+  interval: 30m
+  path: ./clusters/eks/services/velero
+  prune: true
+  timeout: 10m 
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
 
 
 
