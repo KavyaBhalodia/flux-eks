@@ -8,7 +8,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 30m
-  path: ./clusters/eks/aws-ebs-csi
+  path: ./clusters/eks/services/aws-ebs-csi
   prune: true
   timeout: 10m 
   sourceRef:
@@ -24,7 +24,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 30m
-  path: ./clusters/eks/mongodb
+  path: ./clusters/eks/services/mongodb
   prune: true
   timeout: 10m 
   sourceRef:
@@ -40,7 +40,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 30m
-  path: ./clusters/eks/velero
+  path: ./clusters/eks/services/velero
   prune: true
   timeout: 10m 
   sourceRef:
