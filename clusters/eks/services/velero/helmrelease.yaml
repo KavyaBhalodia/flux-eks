@@ -35,21 +35,21 @@ spec:
       server:
         annotations:
           eks.amazonaws.com/role-arn: arn:aws:iam::975050086565:role/velero-backup
-    # schedules:
-    #   every-minute-backup:
-    #     disabled: false
-    #     schedule: "* * * * *"
-    #     paused: false
-    #     template:
-    #       includedNamespaces:
-    #       - '*'
-    #       ttl: "24h"
-    #       storageLocation: kavya-backup
-    #       LabelSelectors:
-    #         - matchLabels:
-    #           apps.kubernetes.io/pod-index: 0
-    #         - matchLabels:
-    #           statefulset.kubernetes.io/pod-name: dev-mongodb-dev-1         
+    schedules:
+      every-minute-backup:
+        disabled: false
+        schedule: "* * * * *"
+        paused: false
+        template:
+          includedNamespaces:
+          - '*'
+          ttl: "24h"
+          storageLocation: kavya-backup
+          LabelSelectors:
+            - matchLabels:
+              apps.kubernetes.io/pod-index: 0
+            - matchLabels:
+              statefulset.kubernetes.io/pod-name: dev-mongodb-dev-1         
              
 
 
