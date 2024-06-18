@@ -1,38 +1,56 @@
----
-apiVersion: helm.toolkit.fluxcd.io/v2
+# ---
+# apiVersion: helm.toolkit.fluxcd.io/v2
+# kind: HelmRelease
+# metadata:
+#   name: mongodb
+#   namespace: flux-system
+# spec:
+#   chart:
+#     spec:
+#       chart: mongodb
+#       version: 15.6.7
+#       sourceRef:
+#         kind: HelmRepository
+#         name: bitnami
+#   interval: 1m0s
+#   releaseName: mongodb
+#   targetNamespace: default
+#   values:
+#     architecture: replicaset
+#     arbiter:
+#       enabled: false
+#     replicaCount: 3
+#     podAnnotations:
+#       pre.hook.backup.velero.io/container: mongodb
+#       pre.hook.backup.velero.io/command: '["/bin/bash", "-c", "mongosh --eval \"db.fsyncLock()\" -u root -p $MONGODB_ROOT_PASSWORD"]'
+#       post.hook.backup.velero.io/container: mongodb
+#       post.hook.backup.velero.io/command: '["/bin/bash", "-c", "mongosh --eval \"db.fsyncUnlock()\" -u root -p $MONGODB_ROOT_PASSWORD"]'
+#     # spec:
+#     #   containers:
+#     #   - name: mongodb
+#     #     image: mongo:4.4
+#     #     env:
+#     #     - name: MONGODB_ROOT_PASSWORD
+#     #       valueFrom:
+#     #         secretKeyRef:
+#     #           name: mongodb
+#     #           key: mongodb-root-password
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: mongodb
-  namespace: flux-system
+  name: mongodb-staging
+  namespace: staging
 spec:
+  interval: 5m
   chart:
     spec:
       chart: mongodb
-      version: 15.6.7
+      version: "12.1.31" # mongodb version 5.0.10
       sourceRef:
         kind: HelmRepository
-        name: bitnami
-  interval: 1m0s
-  releaseName: mongodb
-  targetNamespace: default
+        name: mongodb
+        namespace: mongodb
   values:
     architecture: replicaset
-    arbiter:
-      enabled: false
-    replicaCount: 3
-    podAnnotations:
-      pre.hook.backup.velero.io/container: mongodb
-      pre.hook.backup.velero.io/command: '["/bin/bash", "-c", "mongosh --eval \"db.fsyncLock()\" -u root -p $MONGODB_ROOT_PASSWORD"]'
-      post.hook.backup.velero.io/container: mongodb
-      post.hook.backup.velero.io/command: '["/bin/bash", "-c", "mongosh --eval \"db.fsyncUnlock()\" -u root -p $MONGODB_ROOT_PASSWORD"]'
-    # spec:
-    #   containers:
-    #   - name: mongodb
-    #     image: mongo:4.4
-    #     env:
-    #     - name: MONGODB_ROOT_PASSWORD
-    #       valueFrom:
-    #         secretKeyRef:
-    #           name: mongodb
-    #           key: mongodb-root-password
+    replicaCount: 1
               
