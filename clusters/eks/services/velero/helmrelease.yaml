@@ -21,7 +21,7 @@ spec:
         provider: aws
       volumeSnapshotLocation:
       - config:
-          region: ap-south-1c
+          region: ap-south-1
         provider: aws
     initContainers:
     - name: velero-plugin-for-aws
