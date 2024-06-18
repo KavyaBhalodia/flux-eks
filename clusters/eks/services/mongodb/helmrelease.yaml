@@ -49,7 +49,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: mongodb
-        namespace: mongodb
+        namespace: flux-system
   values:
     architecture: replicaset
     replicaCount: 1
