@@ -44,7 +44,7 @@ spec:
           includedNamespaces:
           - '*'
           ttl: "24h"
-          storageLocation: kavya-backup
+          storageLocation: default
           orLabelSelectors:
             - matchLabels:
                 statefulset.kubernetes.io/pod-name: dev-mongodb-dev-0
