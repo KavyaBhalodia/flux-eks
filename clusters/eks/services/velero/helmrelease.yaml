@@ -35,34 +35,34 @@ spec:
       server:
         annotations:
           eks.amazonaws.com/role-arn: arn:aws:iam::975050086565:role/velero-backup
-    schedules:
-      hourly-backup:
-        disabled: false
-        schedule: "* * * * *"
-        paused: false
-        template:
-          ttl: "24h"
-          storageLocation: default
-          labelSelector:
-            matchLabels:
-              # statefulset.kubernetes.io/pod-name: mongodb-mongodb-dev-1
-              # statefulset.kubernetes.io/pod-name: mongodb-mongodb-staging-1
-              apps.kubernetes.io/pod-index: 1
+    # schedules:
+    #   hourly-backup:
+    #     disabled: false
+    #     schedule: "* * * * *"
+    #     paused: false
+    #     template:
+    #       ttl: "24h"
+    #       storageLocation: default
+    #       labelSelector:
+    #         matchLabels:
+    #           # statefulset.kubernetes.io/pod-name: mongodb-mongodb-dev-1
+    #           # statefulset.kubernetes.io/pod-name: mongodb-mongodb-staging-1
+    #           apps.kubernetes.io/pod-index: 1
 
-              
+
           
-              # statefulset.kubernetes.io/pod-name: mongodb-2
-                  # statefulset.kubernetes.io/pod-name=default-mysql-dev-secondary-0
-          # daily-backup:
-          #   disabled: false
-          #   schedule: "* * * * *"
-          #   paused: false
-          #   template:
-          #     ttl: "504h"
-          #     storageLocation: kavya-backup
-          #     labelSelector:
-          #       matchLabels:
-          #         statefulset.kubernetes.io/pod-name: mongodb-1
-          #         # apps.kubernetes.io/pod-index: 1 (use this tag or above one)
-          #         statefulset.kubernetes.io/pod-name=default-mysql-dev-secondary-0
+    #           # statefulset.kubernetes.io/pod-name: mongodb-2
+    #               # statefulset.kubernetes.io/pod-name=default-mysql-dev-secondary-0
+    #       # daily-backup:
+    #       #   disabled: false
+    #       #   schedule: "* * * * *"
+    #       #   paused: false
+    #       #   template:
+    #       #     ttl: "504h"
+    #       #     storageLocation: kavya-backup
+    #       #     labelSelector:
+    #       #       matchLabels:
+    #       #         statefulset.kubernetes.io/pod-name: mongodb-1
+    #       #         # apps.kubernetes.io/pod-index: 1 (use this tag or above one)
+    #       #         statefulset.kubernetes.io/pod-name=default-mysql-dev-secondary-0
             
