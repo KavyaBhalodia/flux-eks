@@ -49,7 +49,7 @@ spec:
             - matchLabels:
                 apps.kubernetes.io/pod-index: 0
             - matchLabels:
-                statefulset.kubernetes.io/pod-name: dev-mongodb-dev-1         
+                apps.kubernetes.io/pod-index: 1
              
 
 
