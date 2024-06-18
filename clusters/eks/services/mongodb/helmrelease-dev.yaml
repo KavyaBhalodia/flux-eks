@@ -18,6 +18,6 @@ spec:
   targetNamespace: mongodb
   values:
     architecture: replicaset
-    replicaCount: 1
+    replicaCount: 2
     arbiter:
       enabled: false

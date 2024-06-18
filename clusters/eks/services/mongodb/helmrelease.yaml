@@ -53,5 +53,11 @@ spec:
   targetNamespace: mongodb
   values:
     architecture: replicaset
-    replicaCount: 1
-              
+    replicaCount: 2
+    arbiter:
+      enabled: false
+    podAnnotations:
+      pre.hook.backup.velero.io/container: mongodb
+      pre.hook.backup.velero.io/command: '["/bin/bash", "-c", "mongosh --eval \"db.fsyncLock()\" -u root -p $MONGODB_ROOT_PASSWORD"]'
+      post.hook.backup.velero.io/container: mongodb
+      post.hook.backup.velero.io/command: '["/bin/bash", "-c", "mongosh --eval \"db.fsyncUnlock()\" -u root -p $MONGODB_ROOT_PASSWORD"]'
