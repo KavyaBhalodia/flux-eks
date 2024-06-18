@@ -45,8 +45,6 @@ spec:
           storageLocation: default
           labelSelector:
             matchLabels:
-              # statefulset.kubernetes.io/pod-name: mongodb-mongodb-dev-1
-              # statefulset.kubernetes.io/pod-name: mongodb-mongodb-staging-1
               apps.kubernetes.io/pod-index: 1
 
 
