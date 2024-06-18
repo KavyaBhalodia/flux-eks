@@ -52,7 +52,7 @@ spec:
           #       apps.kubernetes.io/pod-index: 1
           labelSelector:
             matchLabels:
-              app: velero
+              apps.kubernetes.io/pod-index: 1
              
 
 
