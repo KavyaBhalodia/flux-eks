@@ -18,7 +18,7 @@ spec:
     arbiter:
       enabled: false
     replicaCount: 3
-    podAnnotations:
+    # podAnnotations:
     #   pre.hook.backup.velero.io/container: mongodb
     #   pre.hook.backup.velero.io/command: '["/bin/bash", "-c", "mongosh --eval \"db.fsyncLock()\" -u root -p $MONGODB_ROOT_PASSWORD"]'
     #   post.hook.backup.velero.io/container: mongodb
