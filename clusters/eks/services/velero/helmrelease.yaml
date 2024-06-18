@@ -46,7 +46,7 @@ spec:
           labelSelector:
             matchLabels:
               statefulset.kubernetes.io/pod-name: mongodb-mongodb-dev-1
-              statefulset.kubernetes.io/pod-name: mongodb-mongodb-staging-1
+              # statefulset.kubernetes.io/pod-name: mongodb-mongodb-staging-1
           
               # statefulset.kubernetes.io/pod-name: mongodb-2
                   # statefulset.kubernetes.io/pod-name=default-mysql-dev-secondary-0
