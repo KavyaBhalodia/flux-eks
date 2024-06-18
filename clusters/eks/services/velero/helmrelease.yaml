@@ -41,6 +41,8 @@ spec:
         schedule: "* * * * *"
         paused: false
         template:
+          includedNamespaces:
+          - '*'
           ttl: "24h"
           storageLocation: kavya-backup
           labelSelector:
