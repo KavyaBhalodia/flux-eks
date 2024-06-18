@@ -42,7 +42,7 @@ spec:
         paused: false
         template:
           ttl: "24h"
-          storageLocation: default
+          storageLocation: kavya-backup
           # labelSelector:
           #   matchLabels:
           #     apps.kubernetes.io/pod-index: 1
