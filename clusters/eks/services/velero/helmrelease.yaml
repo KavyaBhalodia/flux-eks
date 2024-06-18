@@ -35,17 +35,18 @@ spec:
       server:
         annotations:
           eks.amazonaws.com/role-arn: arn:aws:iam::975050086565:role/velero-backup
-    schedules:
-      hourly-backup:
-        disabled: false
-        schedule: "* * * * *"
-        paused: false
-        template:
-          ttl: "24h"
-          storageLocation: kavya-backup
-          labelSelector:
-            matchLabels:
-              apps.kubernetes.io/pod-index: 1
+    # schedules:
+    #   hourly-backup:
+    #     disabled: false
+    #     schedule: "* * * * *"
+    #     paused: false
+    #     template:
+    #       ttl: "24h"
+    #       storageLocation: kavya-backup
+    #       labelSelector:
+    #         matchLabels:
+    #           apps.kubernetes.io/pod-index: 1
+    #           apps.kubernetes.io/pod-index: 0
 
 
           
