@@ -36,7 +36,7 @@ spec:
         annotations:
           eks.amazonaws.com/role-arn: arn:aws:iam::975050086565:role/velero-backup
     schedules:
-      every-minute-backup:
+      everyminute-backup:
         disabled: false
         schedule: "* * * * *"
         paused: false
@@ -44,7 +44,7 @@ spec:
           includedNamespaces:
           - '*'
           includedResources:
-          - persistentvolumes
+          - pv
           ttl: "24h"
           storageLocation: default
           orLabelSelectors:
