@@ -45,14 +45,14 @@ spec:
           - '*'
           ttl: "24h"
           storageLocation: kavya-backup
-          # orLabelSelectors:
-          #   - matchLabels:
-          #       apps.kubernetes.io/pod-index: 0
-          #   - matchLabels:
-          #       apps.kubernetes.io/pod-index: 1
-          labelSelector:
-            matchLabels:
-              statefulset.kubernetes.io/pod-name: dev-mongodb-dev-0
+          orLabelSelectors:
+            - matchLabels:
+                statefulset.kubernetes.io/pod-name: dev-mongodb-dev-0
+            - matchLabels:
+                statefulset.kubernetes.io/pod-name: staging-mongodb-staging-1
+          # labelSelector:
+          #   matchLabels:
+          #     statefulset.kubernetes.io/pod-name: dev-mongodb-dev-0
             
 
              
