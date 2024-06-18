@@ -45,7 +45,7 @@ spec:
           - '*'
           ttl: "24h"
           storageLocation: kavya-backup
-          LabelSelectors:
+          orLabelSelectors:
             - matchLabels:
               apps.kubernetes.io/pod-index: 0
             - matchLabels:
