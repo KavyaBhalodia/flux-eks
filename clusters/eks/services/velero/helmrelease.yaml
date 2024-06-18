@@ -43,9 +43,9 @@ spec:
         template:
           ttl: "24h"
           storageLocation: default
-          labelSelector:
-            matchLabels:
-              apps.kubernetes.io/pod-index: 1
+          # labelSelector:
+          #   matchLabels:
+          #     apps.kubernetes.io/pod-index: 1
 
 
           
