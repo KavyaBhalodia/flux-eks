@@ -70,24 +70,7 @@ spec:
             # container: mongodb
             # command:
             # - /bin/uname
-            # - mongosh
-
-
-
-
-
-
-
-
-          # labelSelector:
-          #   matchLabels:
-          #     statefulset.kubernetes.io/pod-name: dev-mongodb-dev-0
-            
-
-             
-
-
-          
+            # - mongosh          
               # statefulset.kubernetes.io/pod-name: mongodb-2
                   # statefulset.kubernetes.io/pod-name=default-mysql-dev-secondary-0
           # daily-backup:
