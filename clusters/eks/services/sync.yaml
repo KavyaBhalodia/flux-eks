@@ -58,7 +58,7 @@ metadata:
  namespace: flux-system
 spec:
  interval: 10m0s
- path: ./clusters/eks/mysql
+ path: ./clusters/eks/services/mysql
  prune: true
  sourceRef:
    kind: GitRepository
