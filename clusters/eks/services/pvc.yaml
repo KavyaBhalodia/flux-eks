@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: datadir-mymongodb-0
+  name: data-default-mysql-dev-primary-0
   namespace: default
 spec:
   accessModes:
@@ -10,4 +10,4 @@ spec:
   resources:
     requests:
       storage: 8Gi
-  volumeName: pvc-30c071f3-2577-4538-bfaa-0196dae960dc
+  volumeName: pvc-54448967-ff86-456c-b26a-343c1e7f19de
