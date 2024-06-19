@@ -50,16 +50,16 @@ spec:
 
 
 ############################### MySQL ######################################
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
- name: mysql
- namespace: flux-system
-spec:
- interval: 10m0s
- path: ./clusters/eks/services/mysql
- prune: true
- sourceRef:
-   kind: GitRepository
-   name: flux-system
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1
+# kind: Kustomization
+# metadata:
+#  name: mysql
+#  namespace: flux-system
+# spec:
+#  interval: 10m0s
+#  path: ./clusters/eks/services/mysql
+#  prune: true
+#  sourceRef:
+#    kind: GitRepository
+#    name: flux-system
