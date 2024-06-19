@@ -12,7 +12,7 @@ resourceModifierRules:
   #   value: "ap-south-1b"
   - operation: add
     path: "/spec/claimRef"
-    value: "{\"apiVersion\": \"v1\",\"kind\": \"PersistentVolumeClaim\",\"namespace\": \"default\", \"name\": \"data-default-mysql-dev-primary-0 \"}"
+    value: "{\"apiVersion\": \"v1\",\"kind\": \"PersistentVolumeClaim\",\"namespace\": \"default\", \"name\": \"data-default-mysql-dev-primary-0\"}"
   - operation: add
     path: "/spec/persistentVolumeReclaimPolicy"
     value: "Retain"
