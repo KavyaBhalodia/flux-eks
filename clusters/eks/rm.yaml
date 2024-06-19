@@ -1,0 +1,18 @@
+version: v1
+resourceModifierRules:
+- conditions:
+     groupResource: persistentvolumes
+     resourceNameRegex: "pvc-e9b15763-dd79-4c2f-8884-569016283673"
+  patches:
+  # - operation: replace
+  #   path: "/metadata/labels/topology.kubernetes.io~1zone"
+  #   value: "ap-south-1b"
+  # - operation: replace
+  #   path: "/spec/nodeAffinity/required/nodeSelectorTerms/0/matchExpressions/0/values/0"
+  #   value: "ap-south-1b"
+  - operation: add
+    path: "/spec/claimRef"
+    value: "{\"apiVersion\": \"v1\",\"kind\": \"PersistentVolumeClaim\",\"namespace\": \"default\", \"name\": \"data-default-mysql-dev-primary-0 \"}"
+  - operation: add
+    path: "/spec/persistentVolumeReclaimPolicy"
+    value: "Retain"
