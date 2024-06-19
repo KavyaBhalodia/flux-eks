@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: data-default-mysql-dev-secondary-0
+  name: data-default-mysql-dev-primary-0
   namespace: default
 spec:
   accessModes:
@@ -10,4 +10,4 @@ spec:
   resources:
     requests:
       storage: 8Gi
-  volumeName: pvc-62cbf954-6c9c-44fc-82b4-9a0926854588
+  volumeName: pvc-e9b15763-dd79-4c2f-8884-569016283673
