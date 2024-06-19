@@ -28,7 +28,7 @@ spec:
         # pre.hook.backup.velero.io/command: '["/bin/bash", "-c", "mysql -u root -pCbQb6RDDw7 -e \"STOP REPLICA;\""]'
         pre.hook.backup.velero.io/command: '["/bin/bash", "-c", "mysql -u root -pyd6zACKSrv -e \"STOP REPLICA;\" && mysql -u root -pyd6zACKSrv -e \"FLUSH TABLES WITH READ LOCK;\""]'
         post.hook.backup.velero.io/container: mysql
-        post.hook.backup.velero.io/command: '["/bin/bash", "-c", "mysql -u root -pyd6zACKSrv -e \"START REPLICA;\" && mysql -u root -pyd6zACKSrv -e \"UNLOCK TABLES;\""]'
+        post.hook.backup.velero.io/command: '["/bin/bash", "-c", "mysql -u root -pyd6zACKSrv -e \"UNLOCK TABLES;\" && mysql -u root -pyd6zACKSrv -e \"START REPLICA;\""]'
         # post.hook.backup.velero.io/command: '["/bin/bash", "-c", "mysql -u root -pCbQb6RDDw7 -e \"START REPLICA;\""]'
         
     # spec:
